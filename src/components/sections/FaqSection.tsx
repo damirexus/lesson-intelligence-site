@@ -9,7 +9,7 @@ export function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" aria-labelledby="faq-heading" className="py-20 sm:py-24 lg:py-28">
+    <section id="faq" aria-labelledby="faq-heading" className="bg-white py-20 sm:py-24 lg:py-28">
       <Container>
         <SectionHeader
           id="faq-heading"
@@ -48,4 +48,3 @@ export function FaqSection() {
     </section>
   );
 }
-

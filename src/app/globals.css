@@ -71,6 +71,18 @@ section[id] {
   transform: translateY(0);
 }
 
+.video-container {
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal-on-scroll,
   .reveal-on-scroll.is-visible {

@@ -5,7 +5,7 @@ import { pageContent } from "@/lib/content";
 
 export function LayersSection() {
   return (
-    <section id="five-layers" aria-labelledby="layers-heading" className="bg-white py-20 sm:py-24 lg:py-28">
+    <section id="five-layers" aria-labelledby="layers-heading" className="py-20 sm:py-24 lg:py-28">
       <Container>
         <SectionHeader
           id="layers-heading"

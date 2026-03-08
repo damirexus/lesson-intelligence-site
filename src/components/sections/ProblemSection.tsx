@@ -4,7 +4,7 @@ import { pageContent } from "@/lib/content";
 
 export function ProblemSection() {
   return (
-    <section id="problem" aria-labelledby="problem-heading" className="bg-white py-20 sm:py-24 lg:py-28">
+    <section id="problem" aria-labelledby="problem-heading" className="py-20 sm:py-24 lg:py-28">
       <Container>
         <SectionHeader id="problem-heading" title={pageContent.problem.title} />
         <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">

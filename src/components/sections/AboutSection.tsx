@@ -5,7 +5,7 @@ import { pageContent } from "@/lib/content";
 
 export function AboutSection() {
   return (
-    <section id="about" aria-labelledby="about-heading" className="bg-white py-20 sm:py-24 lg:py-28">
+    <section id="about" aria-labelledby="about-heading" className="py-20 sm:py-24 lg:py-28">
       <Container>
         <SectionHeader id="about-heading" title={pageContent.about.title} />
         <div className="mt-12 grid items-start gap-8 lg:grid-cols-[2fr_1fr] lg:gap-10">

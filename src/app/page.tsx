@@ -7,6 +7,7 @@ import { LayersSection } from "@/components/sections/LayersSection";
 import { PracticeSection } from "@/components/sections/PracticeSection";
 import { ProblemSection } from "@/components/sections/ProblemSection";
 import { SignupSection } from "@/components/sections/SignupSection";
+import { VideoOverviewSection } from "@/components/sections/VideoOverviewSection";
 import { WhatIsLifSection } from "@/components/sections/WhatIsLifSection";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
@@ -23,6 +24,9 @@ export default function Home() {
       <main id="main-content" className="bg-gradient-to-b from-brand-bg to-brand-gradientEnd">
         <ScrollReveal initiallyVisible>
           <HeroSection />
+        </ScrollReveal>
+        <ScrollReveal>
+          <VideoOverviewSection />
         </ScrollReveal>
         <ScrollReveal>
           <ProblemSection />
