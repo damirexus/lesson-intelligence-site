@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 
-const KIT_ACTION_URL = "https://app.kit.com/forms/9177547/subscriptions";
+const FORM_ID = "9177547";
+const API_KEY = process.env.KIT_API_KEY;
 
 export async function POST(request: Request) {
   try {
@@ -11,24 +12,29 @@ export async function POST(request: Request) {
       return NextResponse.json({ message: "Email is required." }, { status: 400 });
     }
 
-    const response = await fetch(KIT_ACTION_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded"
-      },
-      body: new URLSearchParams({
-        email_address: emailAddress
-      }).toString(),
-      cache: "no-store"
-    });
+    const response = await fetch(
+      `https://api.convertkit.com/v3/forms/${FORM_ID}/subscribe`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          api_key: API_KEY,
+          email: emailAddress
+        })
+      }
+    );
+
+    const data = await response.json();
 
     if (!response.ok) {
-      return NextResponse.json({ message: "Kit submission failed." }, { status: 502 });
+      return NextResponse.json({ message: "Kit API error", data }, { status: 500 });
     }
 
     return NextResponse.json({ success: true });
-  } catch {
-    return NextResponse.json({ message: "Unable to submit right now." }, { status: 500 });
+
+  } catch (error) {
+    return NextResponse.json({ message: "Server error" }, { status: 500 });
   }
 }
-
