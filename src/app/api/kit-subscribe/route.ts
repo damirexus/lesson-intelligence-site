@@ -17,15 +17,15 @@ export async function POST(request: Request) {
     }
 
     const response = await fetch(
-      `https://api.kit.com/v4/forms/${FORM_ID}/subscribers`,
+      `https://api.convertkit.com/v3/forms/${FORM_ID}/subscribe`,
       {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
-          "X-Kit-Api-Key": API_KEY,
+          "Content-Type": "application/json; charset=utf-8",
         },
         body: JSON.stringify({
-          email_address: emailAddress,
+          api_key: API_KEY,
+          email: emailAddress,
         }),
         cache: "no-store",
       }
