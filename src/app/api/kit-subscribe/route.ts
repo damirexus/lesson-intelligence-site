@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 const FORM_ID = "9177547";
-const API_KEY = process.env.kit_12368c5023390f01ef82aac000e891e0;
+const API_KEY = process.env.KIT_API_KEY;
 
 export async function POST(request: Request) {
   try {
