@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-anton: "Anton";
+  --font-inter: "Inter";
+  /* BRAND COLORS: Update values here to change the full site palette. */
+  --lif-navy: #0b132b;
+  --lif-purple: #d4a017;
+  --lif-bg: #f7f8fa;
+  --lif-gradient-end: #e9eef6;
+  --lif-text: #111827;
+  --lif-muted: #6b7280;
+  --lif-border: #e6e8ef;
+  --lif-card: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--lif-bg);
+  color: var(--lif-text);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+section[id] {
+  scroll-margin-top: 6.5rem;
+}
+
+.interactive-tab {
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease;
+}
+
+.interactive-tab:hover,
+.interactive-tab:focus-within {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 30px rgba(11, 19, 43, 0.12);
+  border-color: color-mix(in oklab, var(--lif-purple) 45%, var(--lif-border));
+}
+
+.reveal-on-scroll {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 520ms ease,
+    transform 520ms ease;
+}
+
+.reveal-on-scroll.is-ready {
+  opacity: 0;
+  transform: translateY(22px);
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll,
+  .reveal-on-scroll.is-visible {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .interactive-tab,
+  .interactive-tab:hover,
+  .interactive-tab:focus-within {
+    transform: none !important;
+    transition: none !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
