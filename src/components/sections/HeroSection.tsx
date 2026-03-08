@@ -57,7 +57,9 @@ export function HeroSection() {
               </span>
               {headlineEnd}
             </h1>
-            <p className="mt-6 max-w-2xl text-[1.04rem] leading-8 text-brand-muted sm:mt-7 sm:text-[1.12rem]">{pageContent.hero.subtitle}</p>
+            <p className="mt-6 max-w-2xl whitespace-pre-line text-[1.04rem] leading-8 text-brand-muted sm:mt-7 sm:text-[1.12rem]">
+              {pageContent.hero.subtitle}
+            </p>
             <div className="mt-8 max-w-2xl sm:mt-10">
               <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:flex-row sm:items-center" aria-label="Hero signup form">
                 <label htmlFor="hero-email" className="sr-only">

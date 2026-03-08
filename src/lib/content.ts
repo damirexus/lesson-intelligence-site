@@ -8,7 +8,7 @@ export const pageContent = {
     eyebrow: "Lesson Intelligence Framework",
     title: "Lesson Design for the AI-infused Classroom",
     subtitle:
-      "AI can generate answers instantly. But learning still happens in the process of thinking. When that thinking becomes invisible, teaching becomes guesswork. Get the LIF Teacher's Guide and start applying the framework in your lessons.",
+      "The challenge in today's classroom is no longer producing answers but knowing whether real thinking happened along the way.\n\nWhen the process disappears behind polished output, teaching becomes guesswork.\n\nThe LIF Teacher's Guide helps you design lessons where thinking is built into the structure of the learning itself.",
     primaryCta: "Download LIF Guide",
     secondaryCta: "See the 5 Layers"
   },
