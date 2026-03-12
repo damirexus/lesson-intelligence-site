@@ -6,24 +6,33 @@ export const navItems = [
 export const pageContent = {
   hero: {
     eyebrow: "Lesson Intelligence Framework",
-    title: "Lesson Design for the AI-infused Classroom",
+    title: "Your students look busy. But are they actually thinking?",
     subtitle:
       "The challenge in today's classroom is no longer producing answers but knowing whether real thinking happened along the way.\n\nWhen the process disappears behind polished output, teaching becomes guesswork.\n\nThe LIF Teacher's Guide helps you design lessons where thinking is built into the structure of the learning itself.",
     primaryCta: "Download LIF Guide",
     secondaryCta: "See the 5 Layers"
   },
   problem: {
-    title: "Why Lessons Miss Student Thinking",
-    points: [
-      "A lesson can feel busy, structured, and successful while students do very little real thinking.",
-      "AI makes polished output easy, which means finished work no longer proves understanding.",
-      "If thinking stays hidden, teachers cannot respond precisely - they can only guess, generalize, or move on too early."
+    title: "Does This Sound Familiar?",
+    cards: [
+      {
+        title: "YOUR LESSON WENT WELL. OR DID IT?",
+        body: "Students completed the task. The room was busy. Work got submitted. But when you look at what they produced - you're not sure any real thinking happened. The lesson felt successful. The learning didn't."
+      },
+      {
+        title: "AI FINISHED THE WORK. YOUR STUDENT DIDN'T.",
+        body: "Polished writing. Structured answers. Correct format. In an AI classroom, finished work no longer tells you what a student understands. It only tells you they know how to use a tool."
+      },
+      {
+        title: "YOU CAN'T TEACH WHAT YOU CAN'T SEE.",
+        body: "When thinking stays hidden, your only option is to guess. You generalize feedback, move on too early, and hope it lands. Without visible thinking, responsive teaching is impossible."
+      }
     ]
   },
   whatIsLif: {
     title: "What LIF Is",
     claim:
-      "The Lesson Intelligence Framework (LIF) helps teachers look at lessons through the lens of student thinking. Grounded in learning science, it provides a practical structure for designing lessons where thinking is intentional, visible, and guided. Rather than adding complexity, LIF helps teachers recognize and strengthen practices they already use-while making their purpose clearer.",
+      "LIF gives you a five-step system to design lessons where student thinking can't hide.\n\nNo new curriculum. No extra planning time. Just a clearer lens on what's already happening in your classroom - and what to do about it.",
     description: ""
   },
   layers: {

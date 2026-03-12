@@ -9,7 +9,7 @@ export function PracticeSection() {
   const [openStep, setOpenStep] = useState<number | null>(0);
 
   return (
-    <section id="practice" aria-labelledby="practice-heading" className="border-y border-brand-border bg-white py-20 sm:py-24 lg:py-28">
+    <section id="practice" aria-labelledby="practice-heading" className="border-y border-brand-border bg-brand-bg py-20 sm:py-24 lg:py-28">
       <Container>
         <SectionHeader
           id="practice-heading"

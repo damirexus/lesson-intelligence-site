@@ -2,7 +2,7 @@ import { Container } from "@/components/layout/Container";
 
 export function FooterSection() {
   return (
-    <footer className="border-t border-brand-border bg-[#e1e6ee] py-14">
+    <footer className="border-t border-brand-border bg-white/95 py-14">
       <Container>
         <div className="grid gap-10 md:grid-cols-[repeat(3,minmax(0,1fr))] md:gap-10">
           <div className="space-y-3 md:px-4">

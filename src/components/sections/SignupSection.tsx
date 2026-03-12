@@ -4,7 +4,7 @@ import { KitSignupEmbed } from "./KitSignupEmbed";
 
 export function SignupSection() {
   return (
-    <section id="guide" aria-labelledby="guide-heading" className="border-y border-brand-border py-20 sm:py-24 lg:py-28">
+    <section id="guide" aria-labelledby="guide-heading" className="border-y border-brand-border bg-white py-20 sm:py-24 lg:py-28">
       <Container>
         <h2 id="guide-heading" className="sr-only">
           Get the Free LIF Teacher&apos;s Guide
