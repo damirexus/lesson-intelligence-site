@@ -12,7 +12,7 @@ export function HeroSection() {
   const [error, setError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const highlightedWord = "THINKING";
+  const highlightedWord = "thinking";
   const hasHighlight = pageContent.hero.title.includes(highlightedWord);
   const [headlineStart, headlineEnd] = hasHighlight
     ? pageContent.hero.title.split(highlightedWord)
@@ -48,11 +48,11 @@ export function HeroSection() {
   return (
     <section id="hero" aria-labelledby="hero-title" className="border-b border-brand-border bg-white py-16 sm:py-24 lg:py-28">
       <Container>
-        <div className="grid items-center gap-10 lg:grid-cols-[1.04fr_0.96fr] lg:gap-16">
-          <div className="animate-fade-up lg:col-start-1 lg:row-start-1 lg:max-w-3xl">
+        <div className="grid items-center gap-6 lg:grid-cols-[1.04fr_0.96fr] lg:gap-x-16 lg:gap-y-1">
+          <div className="order-1 animate-fade-up lg:col-start-1 lg:row-start-1 lg:max-w-3xl">
             <h1
               id="hero-title"
-              className="mt-3 max-w-4xl font-display text-[2.1rem] leading-[1.08] text-brand-navy sm:text-[2.75rem] lg:max-w-3xl lg:text-[3.2rem]"
+              className="mt-3 max-w-4xl font-display text-[2.4rem] uppercase leading-[1.08] text-brand-navy sm:text-[2.75rem] lg:max-w-3xl lg:text-[3.2rem]"
             >
               {headlineStart}
               {hasHighlight ? (
@@ -62,11 +62,8 @@ export function HeroSection() {
               ) : null}
               {headlineEnd}
             </h1>
-            <p className="mt-6 max-w-2xl text-[1.02rem] leading-8 text-brand-muted sm:text-[1.1rem]">
-              {pageContent.hero.subtitle}
-            </p>
           </div>
-          <aside className="animate-fade-up rounded-2xl border border-brand-border bg-brand-card p-5 shadow-soft sm:p-7 lg:col-start-2 lg:row-span-2 lg:row-start-1">
+          <aside className="order-2 w-full max-w-[20rem] animate-fade-up rounded-2xl border border-brand-border bg-brand-card p-5 shadow-soft sm:max-w-none sm:p-7 lg:col-start-2 lg:row-span-3 lg:row-start-1">
             <Image
               src="/images/lif-teachers-guide.png"
               alt="Cover of the LIF Teacher's Guide"
@@ -75,7 +72,12 @@ export function HeroSection() {
               className="h-auto w-full rounded-xl border border-brand-border"
             />
           </aside>
-          <div className="animate-fade-up mt-8 max-w-2xl sm:mt-10 lg:col-start-1 lg:row-start-2 lg:mt-2">
+          <div className="order-3 animate-fade-up lg:col-start-1 lg:row-start-2 lg:max-w-3xl">
+            <p className="-mt-1 max-w-2xl text-[1.02rem] leading-8 text-brand-muted sm:-mt-1 sm:text-[1.1rem]">
+              {pageContent.hero.subtitle}
+            </p>
+          </div>
+          <div className="order-4 animate-fade-up mt-1 max-w-2xl sm:mt-2 lg:col-start-1 lg:row-start-3 lg:mt-0">
             <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:flex-row sm:items-center" aria-label="Hero signup form">
               <label htmlFor="hero-email" className="sr-only">
                 School email
@@ -86,7 +88,7 @@ export function HeroSection() {
                 type="email"
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
-                placeholder="School email"
+                placeholder="email"
                 aria-invalid={error ? "true" : "false"}
                 className="w-full rounded-lg border border-brand-border bg-white px-4 py-3.5 text-[1rem] text-brand-text placeholder:text-brand-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-purple"
               />

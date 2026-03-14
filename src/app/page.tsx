@@ -2,13 +2,11 @@ import { StickyNav } from "@/components/layout/StickyNav";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { FaqSection } from "@/components/sections/FaqSection";
 import { FooterSection } from "@/components/sections/FooterSection";
+import { GuideContentsSection } from "@/components/sections/GuideContentsSection";
 import { HeroSection } from "@/components/sections/HeroSection";
-import { LayersSection } from "@/components/sections/LayersSection";
 import { PracticeSection } from "@/components/sections/PracticeSection";
-import { ProblemSection } from "@/components/sections/ProblemSection";
 import { SignupSection } from "@/components/sections/SignupSection";
-import { VideoOverviewSection } from "@/components/sections/VideoOverviewSection";
-import { WhatIsLifSection } from "@/components/sections/WhatIsLifSection";
+import { WhatLifHelpsSection } from "@/components/sections/WhatLifHelpsSection";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export default function Home() {
@@ -26,16 +24,10 @@ export default function Home() {
           <HeroSection />
         </ScrollReveal>
         <ScrollReveal>
-          <VideoOverviewSection />
+          <WhatLifHelpsSection />
         </ScrollReveal>
         <ScrollReveal>
-          <ProblemSection />
-        </ScrollReveal>
-        <ScrollReveal>
-          <WhatIsLifSection />
-        </ScrollReveal>
-        <ScrollReveal>
-          <LayersSection />
+          <GuideContentsSection />
         </ScrollReveal>
         <ScrollReveal>
           <PracticeSection />
