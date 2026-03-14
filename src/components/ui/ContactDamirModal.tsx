@@ -56,12 +56,12 @@ export function ContactDamirModal({ isOpen, onClose }: ContactDamirModalProps) {
 
   return (
     <div
-      className="fixed inset-0 z-[120] flex items-center justify-center bg-[#0b132b]/55 px-4 py-8 animate-fade-up"
+      className="fixed inset-0 z-[120] flex items-end justify-center bg-[#0b132b]/55 px-0 py-0 animate-fade-up sm:items-center sm:px-4 sm:py-8"
       role="dialog"
       aria-modal="true"
       aria-labelledby="contact-modal-title"
     >
-      <div className="relative max-h-[90vh] w-full max-w-xl overflow-y-auto rounded-2xl border border-brand-border bg-white p-6 shadow-soft sm:p-8">
+      <div className="relative max-h-[92vh] w-full overflow-y-auto rounded-t-2xl border border-brand-border bg-white p-6 shadow-soft sm:max-h-[90vh] sm:max-w-xl sm:rounded-2xl sm:p-8">
         <button
           ref={closeButtonRef}
           type="button"
