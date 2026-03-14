@@ -61,7 +61,7 @@ export function ContactDamirModal({ isOpen, onClose }: ContactDamirModalProps) {
       aria-modal="true"
       aria-labelledby="contact-modal-title"
     >
-      <div className="relative w-full max-w-xl rounded-2xl border border-brand-border bg-white p-6 shadow-soft sm:p-8">
+      <div className="relative max-h-[90vh] w-full max-w-xl overflow-y-auto rounded-2xl border border-brand-border bg-white p-6 shadow-soft sm:p-8">
         <button
           ref={closeButtonRef}
           type="button"
@@ -102,17 +102,17 @@ export function ContactDamirModal({ isOpen, onClose }: ContactDamirModalProps) {
             />
           </div>
           {error ? <p className="text-sm text-red-600">{error}</p> : null}
-          <div className="flex justify-end gap-3">
+          <div className="flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
             <button
               type="button"
               onClick={onClose}
-              className="inline-flex items-center justify-center rounded-lg border border-brand-border bg-white px-5 py-3 text-sm font-semibold text-brand-navy transition hover:border-brand-purple hover:text-brand-purple focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-purple"
+              className="inline-flex w-full items-center justify-center rounded-lg border border-brand-border bg-white px-5 py-3 text-sm font-semibold text-brand-navy transition hover:border-brand-purple hover:text-brand-purple focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-purple sm:w-auto"
             >
               Cancel
             </button>
             <button
               type="submit"
-              className="inline-flex items-center justify-center rounded-lg bg-brand-purple px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#b8850e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-purple"
+              className="inline-flex w-full items-center justify-center rounded-lg bg-brand-purple px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#b8850e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-purple sm:w-auto"
             >
               Send
             </button>
