@@ -6,10 +6,10 @@ export const navItems = [
 export const pageContent = {
   hero: {
     eyebrow: "Lesson Intelligence Framework",
-    title: "Your students look busy. But are they actually thinking?",
+    title: "DESIGN LESSONS WHERE STUDENT THINKING IS THE PRIORITY",
     subtitle:
-      "The challenge in today's classroom is no longer producing answers but knowing whether real thinking happened along the way.\n\nWhen the process disappears behind polished output, teaching becomes guesswork.\n\nThe LIF Teacher's Guide helps you design lessons where thinking is built into the structure of the learning itself.",
-    primaryCta: "Download LIF Guide",
+      "The Lesson Intelligence Framework (LIF) is a learning-science-driven framework that helps teachers design and implement lessons where student thinking is required, cognitively balanced, visible, and guided.",
+    primaryCta: "Get the LIF Guide",
     secondaryCta: "See the 5 Layers"
   },
   problem: {
@@ -139,7 +139,7 @@ export const pageContent = {
       "Simple reflection prompts",
       "Immediate classroom use"
     ],
-    cta: "Send me the guide"
+    cta: "Get the LIF Guide"
   },
   footer: {
     note: "Lesson Intelligence Framework (LIF)",

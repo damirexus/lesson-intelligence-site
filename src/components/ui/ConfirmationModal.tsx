@@ -63,14 +63,6 @@ export function ConfirmationModal({ isOpen, onClose }: ConfirmationModalProps) {
         </p>
 
         <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-          <a
-            href="https://mail.google.com"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex w-full items-center justify-center rounded-lg bg-brand-purple px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#b8850e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-purple sm:w-auto"
-          >
-            Open Gmail
-          </a>
           <button
             type="button"
             onClick={onClose}

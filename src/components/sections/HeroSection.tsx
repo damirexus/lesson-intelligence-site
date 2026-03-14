@@ -12,10 +12,10 @@ export function HeroSection() {
   const [error, setError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const highlightedPhrase = "thinking";
-  const hasHighlight = pageContent.hero.title.includes(highlightedPhrase);
+  const highlightedWord = "THINKING";
+  const hasHighlight = pageContent.hero.title.includes(highlightedWord);
   const [headlineStart, headlineEnd] = hasHighlight
-    ? pageContent.hero.title.split(highlightedPhrase)
+    ? pageContent.hero.title.split(highlightedWord)
     : [pageContent.hero.title, ""];
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
@@ -52,17 +52,17 @@ export function HeroSection() {
           <div className="animate-fade-up lg:col-start-1 lg:row-start-1 lg:max-w-3xl">
             <h1
               id="hero-title"
-              className="max-w-4xl font-display text-[2.2rem] uppercase leading-[1.04] text-brand-navy sm:text-[3rem] lg:max-w-3xl lg:text-[3.55rem]"
+              className="mt-3 max-w-4xl font-display text-[2.1rem] leading-[1.08] text-brand-navy sm:text-[2.75rem] lg:max-w-3xl lg:text-[3.2rem]"
             >
               {headlineStart}
               {hasHighlight ? (
                 <span className="decoration-brand-purple underline decoration-[3px] underline-offset-[6px]">
-                  {highlightedPhrase}
+                  {highlightedWord}
                 </span>
               ) : null}
               {headlineEnd}
             </h1>
-            <p className="mt-6 max-w-2xl whitespace-pre-line text-[1.04rem] leading-8 text-brand-muted sm:mt-7 sm:text-[1.12rem]">
+            <p className="mt-6 max-w-2xl text-[1.02rem] leading-8 text-brand-muted sm:text-[1.1rem]">
               {pageContent.hero.subtitle}
             </p>
           </div>
@@ -86,7 +86,7 @@ export function HeroSection() {
                 type="email"
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
-                placeholder="your@mail.com"
+                placeholder="School email"
                 aria-invalid={error ? "true" : "false"}
                 className="w-full rounded-lg border border-brand-border bg-white px-4 py-3.5 text-[1rem] text-brand-text placeholder:text-brand-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-purple"
               />
@@ -94,7 +94,7 @@ export function HeroSection() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="inline-flex w-full items-center justify-center rounded-lg bg-brand-purple px-6 py-3.5 text-[0.95rem] font-semibold text-white shadow-lg shadow-brand-purple/20 transition duration-200 hover:-translate-y-0.5 hover:bg-[#b8850e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-purple"
+                  className="inline-flex w-full items-center justify-center rounded-lg bg-brand-purple px-6 py-3.5 text-[0.98rem] font-semibold text-white shadow-lg shadow-brand-purple/20 transition duration-200 hover:-translate-y-0.5 hover:bg-[#b8850e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-purple"
                 >
                   {isSubmitting ? "Sending..." : pageContent.hero.primaryCta}
                 </button>

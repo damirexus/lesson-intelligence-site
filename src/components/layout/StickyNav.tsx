@@ -138,7 +138,7 @@ export function StickyNav() {
                   disabled={isSubmitting}
                   className="inline-flex items-center rounded-lg bg-brand-purple px-4 py-2 text-sm font-semibold text-white shadow-md shadow-brand-purple/20 transition hover:bg-[#b8850e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-purple"
                 >
-                  {isSubmitting ? "Sending..." : "Download Guide"}
+                  {isSubmitting ? "Sending..." : "Get the LIF Guide"}
                 </button>
               </form>
               {error ? <p className="mt-1 text-xs text-red-600">{error}</p> : null}
