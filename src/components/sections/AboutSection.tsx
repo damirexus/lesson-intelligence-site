@@ -1,15 +1,9 @@
-"use client";
-
-import { useState } from "react";
 import Image from "next/image";
 import { Container } from "@/components/layout/Container";
 import { SectionHeader } from "@/components/layout/SectionHeader";
-import { ContactDamirModal } from "@/components/ui/ContactDamirModal";
 import { pageContent } from "@/lib/content";
 
 export function AboutSection() {
-  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
-
   return (
     <section id="about" aria-labelledby="about-heading" className="bg-white py-20 sm:py-24 lg:py-28">
       <Container>
@@ -35,17 +29,15 @@ export function AboutSection() {
                 ))}
               </ul>
             </div>
-            <button
-              type="button"
-              onClick={() => setIsContactModalOpen(true)}
+            <a
+              href="mailto:contact@lessonintelligence.com"
               className="mt-4 flex w-fit items-center justify-center rounded-lg bg-brand-purple px-5 py-3.5 text-[0.98rem] font-semibold text-white transition hover:bg-[#b8850e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-purple mx-auto lg:mx-0"
             >
               Get in touch
-            </button>
+            </a>
           </div>
         </div>
       </Container>
-      <ContactDamirModal isOpen={isContactModalOpen} onClose={() => setIsContactModalOpen(false)} />
     </section>
   );
 }
