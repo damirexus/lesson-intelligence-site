@@ -1,13 +1,22 @@
 import Image from "next/image";
 import { Container } from "@/components/layout/Container";
-import { SectionHeader } from "@/components/layout/SectionHeader";
 import { pageContent } from "@/lib/content";
 
 export function AboutSection() {
   return (
-    <section id="about" aria-labelledby="about-heading" className="bg-white py-20 sm:py-24 lg:py-28">
+    <section id="about" aria-labelledby="about-heading" className="bg-brand-bg py-20 sm:py-24 lg:py-28">
       <Container>
-        <SectionHeader id="about-heading" title={pageContent.about.title} />
+        <div className="max-w-4xl animate-fade-up">
+          <h2
+            id="about-heading"
+            className="font-display text-[2rem] uppercase leading-[1.08] tracking-[0.03em] text-brand-navy sm:text-[2.5rem]"
+          >
+            {pageContent.about.title}
+          </h2>
+          <p className="mt-2 text-sm font-semibold uppercase tracking-[0.08em] text-brand-purple sm:text-base">
+            {pageContent.about.subtitle}
+          </p>
+        </div>
         <div className="mt-12 grid items-start gap-8 lg:grid-cols-[2fr_1fr] lg:gap-10">
           <aside className="order-1 interactive-tab rounded-2xl border border-brand-border bg-white p-4 shadow-soft sm:p-5 lg:order-2 lg:w-full">
             <Image

@@ -52,10 +52,23 @@ export const pageContent = {
       }
     ]
   },
+  testimonials: {
+    title: "What teachers are saying",
+    quotes: [
+      {
+        text: "\"Research-grounded... structured and systematic... practical and actionable.\"",
+        author: "Syeda S. Zehra, English Teacher"
+      },
+      {
+        text: "\"A framework like this should have existed already - but it's even more necessary now in the age of AI.\"",
+        author: "Horacio Ferrandiz, Head of Science Department"
+      }
+    ]
+  },
   guideContents: {
     title: "WHAT'S INSIDE THE GUIDE",
     sentence:
-      "Inside the guide, you'll find a clear introduction to the five layers of LIF, a worked example that shows the framework in action, a quick planning guide to help you apply it in minutes, and more.",
+      "Inside the guide, you'll find a clear introduction to the five layers of LIF, three worked examples that shows the framework in action, a quick planning guide to help you apply it in minutes, and more.",
     images: [
       {
         src: "/assets/example1.png",
@@ -155,13 +168,14 @@ export const pageContent = {
   },
   about: {
     title: "ABOUT DAMIR ODOBASIC",
+    subtitle: "LIF DEVELOPER",
     points: [
       "Educator, school leader, and speaker focused on AI, innovation, and lesson design in the age of AI",
       "Head of Music, ICT, and Digital Integration at an international school",
       "Works across classroom practice, instructional leadership, and learning science",
       "Innovation in Education awardee",
       "Bett Asia Advisory Board member",
-      "Creator of the Lesson Intelligence Framework (LIF), a practical framework for designing lessons where student thinking is visible, intentional, and guided"
+      "Developer of the Lesson Intelligence Framework (LIF)"
     ]
   },
   faq: {
@@ -176,11 +190,6 @@ export const pageContent = {
         question: "Does using LIF add more planning time?",
         answer:
           "Not necessarily. Most teachers already make many of these decisions while planning. LIF brings them into a clearer structure so lesson design becomes more intentional and easier to refine."
-      },
-      {
-        question: "What is included in the framework?",
-        answer:
-          "The guide includes an introduction to LIF, the five-layer structure, the learning conditions behind it, a worked classroom example, and a quick planning guide for immediate use."
       },
       {
         question: "Is LIF designed only for AI-based classrooms?",

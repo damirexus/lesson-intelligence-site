@@ -2,7 +2,7 @@ import { Container } from "@/components/layout/Container";
 
 export function FooterSection() {
   return (
-    <footer className="border-t border-brand-border bg-brand-bg py-10 sm:py-12">
+    <footer className="border-t border-brand-border bg-white py-10 sm:py-12">
       <Container>
         <div className="mx-auto max-w-5xl">
           <div className="grid gap-8 md:grid-cols-2 md:items-start md:gap-10">

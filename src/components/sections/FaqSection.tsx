@@ -6,12 +6,10 @@ import { SectionHeader } from "@/components/layout/SectionHeader";
 import { pageContent } from "@/lib/content";
 
 export function FaqSection() {
-  const defaultOpenQuestion = "Does using LIF add more planning time?";
-  const initialOpenIndex = pageContent.faq.items.findIndex((item) => item.question === defaultOpenQuestion);
-  const [openIndex, setOpenIndex] = useState<number | null>(initialOpenIndex >= 0 ? initialOpenIndex : null);
+  const [openIndex, setOpenIndex] = useState<number | null>(pageContent.faq.items.length > 0 ? 0 : null);
 
   return (
-    <section id="faq" aria-labelledby="faq-heading" className="bg-brand-bg py-20 sm:py-24 lg:py-28">
+    <section id="faq" aria-labelledby="faq-heading" className="bg-white py-20 sm:py-24 lg:py-28">
       <Container>
         <SectionHeader
           id="faq-heading"

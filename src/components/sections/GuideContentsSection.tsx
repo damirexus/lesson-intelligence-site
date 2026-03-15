@@ -8,7 +8,7 @@ import { pageContent } from "@/lib/content";
 
 export function GuideContentsSection() {
   return (
-    <section id="guide-contents" aria-labelledby="guide-contents-heading" className="bg-white py-20 sm:py-24 lg:py-28">
+    <section id="guide-contents" aria-labelledby="guide-contents-heading" className="bg-brand-bg py-20 sm:py-24 lg:py-28">
       <Container>
         <SectionHeader id="guide-contents-heading" title={pageContent.guideContents.title} />
         <p className="mt-6 max-w-4xl text-[1rem] leading-8 text-brand-muted sm:text-[1.08rem]">{pageContent.guideContents.sentence}</p>

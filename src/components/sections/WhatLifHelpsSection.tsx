@@ -5,7 +5,7 @@ import { pageContent } from "@/lib/content";
 
 export function WhatLifHelpsSection() {
   return (
-    <section id="what-lif-helps" aria-labelledby="what-lif-helps-heading" className="bg-brand-bg py-20 sm:py-24 lg:py-28">
+    <section id="what-lif-helps" aria-labelledby="what-lif-helps-heading" className="bg-white py-20 sm:py-24 lg:py-28">
       <Container>
         <SectionHeader id="what-lif-helps-heading" title={pageContent.whatLifHelps.title} />
         <ul className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">

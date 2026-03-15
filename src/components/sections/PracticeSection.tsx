@@ -4,7 +4,7 @@ import { pageContent } from "@/lib/content";
 
 export function PracticeSection() {
   return (
-    <section id="practice" aria-labelledby="practice-heading" className="border-y border-brand-border bg-brand-bg py-20 sm:py-24 lg:py-28">
+    <section id="practice" aria-labelledby="practice-heading" className="border-y border-brand-border bg-white py-20 sm:py-24 lg:py-28">
       <Container>
         <SectionHeader id="practice-heading" title={pageContent.practice.title} description={pageContent.practice.intro} />
         <div className="mt-12">
