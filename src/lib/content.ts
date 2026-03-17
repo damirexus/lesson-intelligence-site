@@ -62,25 +62,59 @@ export const pageContent = {
       {
         text: "\"A framework like this should have existed already - but it's even more necessary now in the age of AI.\"",
         author: "Horacio Ferrandiz, Head of Science Department"
+      },
+      {
+        text: "\"A thoughtful framework that fits well with modern teaching approaches - it would resonate with many educators, especially in international and IB schools.\"",
+        author: "Muberra Semin, Music Educator"
       }
     ]
   },
   guideContents: {
     title: "WHAT'S INSIDE THE GUIDE",
-    sentence:
-      "Inside the guide, you'll find a clear introduction to the five layers of LIF, three worked examples that shows the framework in action, a quick planning guide to help you apply it in minutes, and more.",
-    images: [
+    framing: [
+      "This is not just the framework.",
+      "It shows how to apply it, stress-test it, and use it in real lessons."
+    ],
+    cards: [
       {
-        src: "/assets/example1.png",
-        alt: "LIF guide preview page one"
+        title: "Learning Conditions Behind LIF",
+        hook: "Why strong lessons fail to produce real thinking.",
+        points: [
+          "Where cognitive overload actually happens",
+          "Why students appear fluent but do not retain",
+          "How to distinguish challenge from confusion"
+        ],
+        outcome: "Translated into practical design decisions you can apply immediately."
       },
       {
-        src: "/assets/example2.png",
-        alt: "LIF guide preview page two"
+        title: "Worked Lesson Examples",
+        hook: "See how LIF looks inside real classrooms.",
+        points: [
+          "History -> justify the most impactful change",
+          "Math -> explain proportional reasoning step by step",
+          "English -> build an evidence-based argument"
+        ],
+        outcome: "Each example broken down across all 5 layers."
       },
       {
-        src: "/assets/example3.png",
-        alt: "LIF guide preview page three"
+        title: "Quick Planning Guide",
+        hook: "A tool you can use before any lesson.",
+        points: [
+          "5 questions to pressure-test your design",
+          "A fast check for thinking, not activity",
+          "A repeatable structure you can use daily"
+        ],
+        outcome: "Designed to be used in under 30 seconds."
+      },
+      {
+        title: "From Idea to Implementation",
+        hook: "How to move from understanding to execution.",
+        points: [
+          "What strong vs weak lessons actually look like",
+          "Where most lessons break (and how to fix them)",
+          "How to refine lessons after seeing student thinking"
+        ],
+        outcome: "Built to turn the framework into a usable system."
       }
     ]
   },

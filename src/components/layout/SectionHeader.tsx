@@ -6,7 +6,7 @@ type SectionHeaderProps = {
 
 export function SectionHeader({ id, title, description }: SectionHeaderProps) {
   return (
-    <div className="max-w-4xl animate-fade-up">
+    <div className="mx-auto max-w-4xl animate-fade-up text-center">
       <h2
         id={id}
         className="font-display text-[2rem] uppercase leading-[1.08] tracking-[0.03em] text-brand-navy sm:text-[2.5rem]"

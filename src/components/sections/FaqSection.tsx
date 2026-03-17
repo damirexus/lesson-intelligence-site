@@ -16,16 +16,16 @@ export function FaqSection() {
           title={pageContent.faq.title}
           description="Clear answers to practical questions teachers ask before using LIF."
         />
-        <div className="mt-12 max-w-4xl space-y-4">
+        <div className="mx-auto mt-12 max-w-4xl space-y-4 text-center">
           {pageContent.faq.items.map((item, index) => (
             <article key={item.question} className="interactive-tab rounded-2xl border border-brand-border bg-white shadow-soft">
               <button
                 type="button"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left sm:px-7"
+                className="flex w-full items-center justify-between gap-4 px-6 py-5 text-center sm:px-7"
                 aria-expanded={openIndex === index}
               >
-                <h3 className="text-[1.02rem] font-semibold text-brand-navy sm:text-[1.08rem]">{item.question}</h3>
+                <h3 className="text-center text-[1.02rem] font-semibold text-brand-navy sm:text-[1.08rem]">{item.question}</h3>
                 <span className="text-xl leading-none text-brand-purple">{openIndex === index ? "−" : "+"}</span>
               </button>
               <div
@@ -37,7 +37,7 @@ export function FaqSection() {
               >
                 <div className="overflow-hidden">
                   <div className="border-t border-brand-border px-6 pb-5 pt-4 sm:px-7">
-                    <p className="text-[0.98rem] leading-8 text-brand-text">{item.answer}</p>
+                    <p className="text-center text-[0.98rem] leading-8 text-brand-text">{item.answer}</p>
                   </div>
                 </div>
               </div>

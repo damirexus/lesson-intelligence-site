@@ -4,7 +4,7 @@ export function VideoOverviewSection() {
   return (
     <section id="video-overview" aria-labelledby="video-overview-heading" className="bg-brand-bg py-20 sm:py-24 lg:py-28">
       <Container>
-        <div className="mx-auto max-w-4xl text-left">
+        <div className="mx-auto max-w-4xl text-center">
           <h2
             id="video-overview-heading"
             className="font-display text-[2rem] uppercase leading-[1.08] tracking-[0.03em] text-brand-navy sm:text-[2.5rem]"

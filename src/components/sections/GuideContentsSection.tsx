@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { Container } from "@/components/layout/Container";
 import { SectionHeader } from "@/components/layout/SectionHeader";
 import { KitSignupEmbed } from "@/components/sections/KitSignupEmbed";
@@ -10,31 +9,23 @@ export function GuideContentsSection() {
   return (
     <section id="guide-contents" aria-labelledby="guide-contents-heading" className="bg-brand-bg py-20 sm:py-24 lg:py-28">
       <Container>
-        <SectionHeader id="guide-contents-heading" title={pageContent.guideContents.title} />
-        <p className="mt-6 max-w-4xl text-[1rem] leading-8 text-brand-muted sm:text-[1.08rem]">{pageContent.guideContents.sentence}</p>
-
-        <div className="mt-10 md:hidden">
-          <p className="mb-3 text-xs tracking-[0.04em] text-brand-muted/80">Swipe right to preview</p>
-          <div className="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2">
-            {pageContent.guideContents.images.map((item) => (
-              <div key={item.src} className="w-full shrink-0 snap-start">
-                <div className="overflow-hidden rounded-2xl border border-brand-border bg-brand-bg shadow-soft">
-                  <Image src={item.src} alt={item.alt} width={1200} height={900} className="h-auto w-full" />
-                </div>
-              </div>
-            ))}
-          </div>
+        <div className="flex justify-center text-center">
+          <SectionHeader id="guide-contents-heading" title={pageContent.guideContents.title} />
         </div>
-
-        <ul className="mt-10 hidden grid-cols-3 gap-6 md:grid">
-          {pageContent.guideContents.images.map((item) => (
-            <li key={item.src}>
-              <div className="interactive-tab overflow-hidden rounded-2xl border border-brand-border bg-brand-bg shadow-soft">
-                <Image src={item.src} alt={item.alt} width={1200} height={900} className="h-auto w-full" />
-              </div>
-            </li>
+        <div className="mt-8 grid gap-5 md:grid-cols-2">
+          {pageContent.guideContents.cards.map((card) => (
+            <article key={card.title} className="interactive-tab rounded-2xl border border-brand-border bg-white p-6 shadow-soft sm:p-7">
+              <h3 className="text-[1.08rem] font-semibold text-brand-navy sm:text-[1.14rem]">{card.title}</h3>
+              <p className="mt-2 text-[0.98rem] leading-7 text-brand-muted">{card.hook}</p>
+              <ul className="mt-4 list-disc space-y-2 pl-5 text-[0.98rem] leading-7 text-brand-text">
+                {card.points.map((point) => (
+                  <li key={point}>{point}</li>
+                ))}
+              </ul>
+              <p className="mt-4 text-[0.96rem] font-medium leading-7 text-brand-navy">{"-> "}{card.outcome}</p>
+            </article>
           ))}
-        </ul>
+        </div>
 
         <div className="mt-10 md:hidden">
           <KitSignupEmbed />

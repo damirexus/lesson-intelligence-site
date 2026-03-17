@@ -8,7 +8,7 @@ export function PracticeSection() {
       <Container>
         <SectionHeader id="practice-heading" title={pageContent.practice.title} description={pageContent.practice.intro} />
         <div className="mt-12">
-          <div className="space-y-6">
+          <div className="grid gap-6 lg:grid-cols-3 lg:gap-8">
             {pageContent.practice.useCases.map((useCase) => (
               <article key={useCase.title} className="interactive-tab rounded-2xl border border-brand-border bg-white p-6 shadow-soft sm:p-7">
                 <h4 className="text-[1.08rem] font-semibold text-brand-navy">{useCase.title}</h4>

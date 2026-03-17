@@ -8,11 +8,11 @@ export function SignupSection() {
       <Container>
         <h2
           id="guide-heading"
-          className="font-display text-[2rem] uppercase leading-[1.08] tracking-[0.03em] text-brand-navy sm:text-[2.5rem]"
+          className="text-center font-display text-[2rem] uppercase leading-[1.08] tracking-[0.03em] text-brand-navy sm:text-[2.5rem]"
         >
           DOWNLOAD THE LIF GUIDE
         </h2>
-        <div className="mt-12 max-w-xl">
+        <div className="mx-auto mt-12 max-w-xl text-center">
           <div className="interactive-tab overflow-hidden rounded-2xl border border-brand-border bg-brand-bg p-5">
             <Image
               src="/images/lif-teachers-guide.png"

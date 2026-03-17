@@ -1,13 +1,13 @@
 import { StickyNav } from "@/components/layout/StickyNav";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { FaqSection } from "@/components/sections/FaqSection";
+import { FiveLayerStructureSection } from "@/components/sections/FiveLayerStructureSection";
 import { FooterSection } from "@/components/sections/FooterSection";
 import { GuideContentsSection } from "@/components/sections/GuideContentsSection";
 import { HeroSection } from "@/components/sections/HeroSection";
+import { LifInActionSection } from "@/components/sections/LifInActionSection";
 import { PracticeSection } from "@/components/sections/PracticeSection";
 import { SignupSection } from "@/components/sections/SignupSection";
-import { WhatLifHelpsSection } from "@/components/sections/WhatLifHelpsSection";
-import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export default function Home() {
@@ -25,10 +25,10 @@ export default function Home() {
           <HeroSection />
         </ScrollReveal>
         <ScrollReveal>
-          <TestimonialsSection />
+          <FiveLayerStructureSection />
         </ScrollReveal>
         <ScrollReveal>
-          <WhatLifHelpsSection />
+          <LifInActionSection />
         </ScrollReveal>
         <ScrollReveal>
           <GuideContentsSection />

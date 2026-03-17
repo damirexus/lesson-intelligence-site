@@ -6,7 +6,7 @@ export function AboutSection() {
   return (
     <section id="about" aria-labelledby="about-heading" className="bg-brand-bg py-20 sm:py-24 lg:py-28">
       <Container>
-        <div className="max-w-4xl animate-fade-up">
+        <div className="mx-auto max-w-4xl animate-fade-up text-center">
           <h2
             id="about-heading"
             className="font-display text-[2rem] uppercase leading-[1.08] tracking-[0.03em] text-brand-navy sm:text-[2.5rem]"
