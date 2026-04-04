@@ -12,10 +12,10 @@ export function HeroSection() {
   const [error, setError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const highlightedWord = "thinking";
-  const hasHighlight = pageContent.hero.title.includes(highlightedWord);
+  const highlightedPhrase = "Thinking Less.";
+  const hasHighlight = pageContent.hero.title.includes(highlightedPhrase);
   const [headlineStart, headlineEnd] = hasHighlight
-    ? pageContent.hero.title.split(highlightedWord)
+    ? pageContent.hero.title.split(highlightedPhrase)
     : [pageContent.hero.title, ""];
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
@@ -56,14 +56,14 @@ export function HeroSection() {
             >
               {headlineStart}
               {hasHighlight ? (
-                <span className="decoration-brand-purple underline decoration-[3px] underline-offset-[6px]">
-                  {highlightedWord}
+                <span className="decoration-[#f4c542] underline decoration-[4px] underline-offset-[6px]">
+                  {highlightedPhrase}
                 </span>
               ) : null}
               {headlineEnd}
             </h1>
           </div>
-          <aside className="order-2 w-full max-w-[20rem] animate-fade-up rounded-2xl border border-brand-border bg-brand-card p-5 shadow-soft sm:max-w-none sm:p-7 lg:col-start-2 lg:row-span-3 lg:row-start-1">
+          <aside className="hidden w-full max-w-[20rem] animate-fade-up rounded-2xl border border-brand-border bg-brand-card p-5 shadow-soft sm:max-w-none sm:p-7 lg:col-start-2 lg:row-span-3 lg:row-start-1 lg:block">
             <Image
               src="/images/lif-teachers-guide.png"
               alt="Cover of the LIF Teacher's Guide"
@@ -72,12 +72,12 @@ export function HeroSection() {
               className="h-auto w-full rounded-xl border border-brand-border"
             />
           </aside>
-          <div className="order-3 animate-fade-up lg:col-start-1 lg:row-start-2 lg:max-w-3xl">
-            <p className="-mt-1 max-w-2xl text-[1.02rem] leading-8 text-brand-muted sm:-mt-1 sm:text-[1.1rem]">
+          <div className="order-2 animate-fade-up lg:col-start-1 lg:row-start-2 lg:max-w-3xl">
+            <p className="-mt-1 max-w-2xl whitespace-pre-line text-[1.02rem] leading-8 text-brand-text sm:-mt-1 sm:text-[1.1rem]">
               {pageContent.hero.subtitle}
             </p>
           </div>
-          <div className="order-4 animate-fade-up mt-1 max-w-2xl sm:mt-2 lg:col-start-1 lg:row-start-3 lg:mt-0">
+          <div className="order-3 animate-fade-up mt-1 max-w-2xl sm:mt-2 lg:col-start-1 lg:row-start-3 lg:mt-0">
             <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:flex-row sm:items-center" aria-label="Hero signup form">
               <label htmlFor="hero-email" className="sr-only">
                 School email
@@ -103,6 +103,12 @@ export function HeroSection() {
               </div>
             </form>
             {error ? <p className="mt-3 text-sm text-red-600">{error}</p> : null}
+            <p className="mt-5 rounded-xl border border-brand-border bg-brand-bg p-4 text-[1rem] leading-7 text-brand-text sm:mt-6">
+              {pageContent.hero.testimonial.text}{" "}
+              <span className="font-semibold uppercase tracking-[0.06em] text-brand-purple">
+                {pageContent.hero.testimonial.author}
+              </span>
+            </p>
           </div>
         </div>
       </Container>

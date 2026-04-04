@@ -6,11 +6,15 @@ export const navItems = [
 export const pageContent = {
   hero: {
     eyebrow: "Lesson Intelligence Framework",
-    title: "Design lessons where student thinking comes first",
+    title: "Your Students Are Producing More. Thinking Less.",
     subtitle:
-      "The Lesson Intelligence Framework (LIF) is a learning-science-driven framework that helps teachers design and implement lessons where student thinking is required, cognitively balanced, visible, and guided.",
-    primaryCta: "Get the LIF Guide",
-    secondaryCta: "See the 5 Layers"
+      "AI didn't create this problem. It made it impossible to ignore.\n\nThe Lesson Intelligence Framework (LIF) gives you a five-layer structure for designing lessons where thinking is required, visible, and guided - grounded in learning science, built for your classroom.",
+    primaryCta: "Download the Free Teacher's Guide",
+    secondaryCta: "See the 5 Layers",
+    testimonial: {
+      text: "\"Research-grounded... structured and systematic... practical and actionable.\"",
+      author: "Syeda S. Zehra, English Teacher"
+    }
   },
   problem: {
     title: "Does This Sound Familiar?",
@@ -55,10 +59,6 @@ export const pageContent = {
   testimonials: {
     title: "What teachers are saying",
     quotes: [
-      {
-        text: "\"Research-grounded... structured and systematic... practical and actionable.\"",
-        author: "Syeda S. Zehra, English Teacher"
-      },
       {
         text: "\"A framework like this should have existed already - but it's even more necessary now in the age of AI.\"",
         author: "Horacio Ferrandiz, Head of Science Department"
