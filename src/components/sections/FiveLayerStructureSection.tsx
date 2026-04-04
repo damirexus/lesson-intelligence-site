@@ -73,7 +73,7 @@ export function FiveLayerStructureSection() {
           </button>
         </div>
 
-        <ul className="mt-8 grid gap-6 lg:grid-cols-3 lg:gap-8">
+        <ul className="mt-8 grid gap-6 md:grid-cols-2 md:gap-8">
           {pageContent.testimonials.quotes.map((quote) => (
             <li key={quote.author} className="interactive-tab rounded-2xl border border-brand-border bg-white p-6 shadow-soft sm:p-7">
               <blockquote className="text-[1.04rem] leading-8 text-brand-text">{quote.text}</blockquote>
