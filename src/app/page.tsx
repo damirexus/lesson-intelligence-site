@@ -1,5 +1,6 @@
 import { StickyNav } from "@/components/layout/StickyNav";
 import { AboutSection } from "@/components/sections/AboutSection";
+import { AuditSection } from "@/components/sections/AuditSection";
 import { FaqSection } from "@/components/sections/FaqSection";
 import { FiveLayerStructureSection } from "@/components/sections/FiveLayerStructureSection";
 import { FooterSection } from "@/components/sections/FooterSection";
@@ -23,6 +24,9 @@ export default function Home() {
       <main id="main-content" className="bg-gradient-to-b from-brand-bg to-brand-gradientEnd">
         <ScrollReveal initiallyVisible>
           <HeroSection />
+        </ScrollReveal>
+        <ScrollReveal>
+          <AuditSection />
         </ScrollReveal>
         <ScrollReveal>
           <FiveLayerStructureSection />

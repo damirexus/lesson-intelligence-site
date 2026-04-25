@@ -46,7 +46,7 @@ export function HeroSection() {
   };
 
   return (
-    <section id="hero" aria-labelledby="hero-title" className="border-b border-brand-border bg-white py-16 sm:py-24 lg:py-28">
+    <section id="hero" aria-labelledby="hero-title" className="border-b border-brand-border bg-brand-bg py-16 sm:py-24 lg:py-28">
       <Container>
         <div className="grid items-center gap-6 lg:grid-cols-[1.04fr_0.96fr] lg:gap-x-16 lg:gap-y-1">
           <div className="order-1 animate-fade-up lg:col-start-1 lg:row-start-1 lg:max-w-3xl">
@@ -77,7 +77,7 @@ export function HeroSection() {
               {pageContent.hero.subtitle}
             </p>
           </div>
-          <div className="order-3 animate-fade-up mt-1 max-w-2xl sm:mt-2 lg:col-start-1 lg:row-start-3 lg:mt-0">
+          <div className="order-3 mt-1 max-w-2xl animate-fade-up sm:mt-2 lg:col-start-1 lg:row-start-3 lg:mt-0">
             <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:flex-row sm:items-center" aria-label="Hero signup form">
               <label htmlFor="hero-email" className="sr-only">
                 School email
