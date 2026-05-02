@@ -9,10 +9,10 @@ export const pageContent = {
     title: "Your Students Are Producing More. Thinking Less.",
     subtitle:
       "AI didn't create this problem. It made it impossible to ignore.\n\nThe Lesson Intelligence Framework (LIF) gives you a five-layer structure for designing lessons where thinking is required, visible, and guided - grounded in learning science, built for your classroom.",
-    primaryCta: "Download the Free Teacher's Guide",
+    primaryCta: "Send Me the Guide",
     secondaryCta: "See the 5 Layers",
     testimonial: {
-      text: "\"Research-grounded... structured and systematic... practical and actionable.\"",
+      text: "\"I found the guide to be research-grounded and really practical for me to apply in lesson planning.\"",
       author: "Syeda S. Zehra, English Teacher"
     }
   },

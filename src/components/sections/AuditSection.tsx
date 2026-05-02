@@ -32,6 +32,15 @@ function getFieldsetId(question: AuditQuestion) {
   return `audit-${question.id}`;
 }
 
+function LockIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+      <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+    </svg>
+  );
+}
+
 export function AuditSection() {
   const [values, setValues] = useState<AuditFormValues>(initialValues);
   const [error, setError] = useState("");
@@ -40,6 +49,7 @@ export function AuditSection() {
   const [email, setEmail] = useState("");
   const [signupError, setSignupError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isGuideUnlocked, setIsGuideUnlocked] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const advanceTimeoutRef = useRef<number | null>(null);
 
@@ -99,6 +109,9 @@ export function AuditSection() {
     }
 
     clearAdvanceTimeout();
+    setIsGuideUnlocked(false);
+    setEmail("");
+    setSignupError("");
     setResult(computeAuditResult(values));
   };
 
@@ -110,6 +123,7 @@ export function AuditSection() {
     setCurrentStepIndex(0);
     setEmail("");
     setSignupError("");
+    setIsGuideUnlocked(false);
   };
 
   const goToPreviousStep = () => {
@@ -136,6 +150,7 @@ export function AuditSection() {
     try {
       setIsSubmitting(true);
       await submitEmailToKit(email.trim());
+      setIsGuideUnlocked(true);
       setEmail("");
       setIsModalOpen(true);
     } catch {
@@ -289,55 +304,73 @@ export function AuditSection() {
 
                 <div className="mt-4 space-y-2 rounded-lg border border-brand-border bg-white p-4 text-sm text-brand-text">
                   <p>
-                    <span className="font-semibold text-brand-navy">Weakest LIF layer:</span> {result.weakestLayer}
-                  </p>
-                  <p>
-                    <span className="font-semibold text-brand-navy">One next move:</span> {result.nextMove}
-                  </p>
-                  <p>
-                    <span className="font-semibold text-brand-navy">Thinking visibility check:</span> {result.visibilityAnalysis.message}
+                    <span className="font-semibold text-brand-navy">Your weakest layer:</span> {result.weakestLayer}
                   </p>
                 </div>
 
-                <form
-                  onSubmit={handleGuideDownload}
-                  className="mt-5 flex flex-col gap-3 border-t border-brand-border pt-5"
-                  aria-label="Audit result guide signup form"
-                >
-                  <label htmlFor="audit-result-email" className="text-sm font-semibold text-brand-navy">
-                    Expand the LIF exploration with the Teacher&apos;s Guide
-                  </label>
-                  <div className="flex flex-col gap-3 sm:flex-row">
-                    <input
-                      id="audit-result-email"
-                      name="email_address"
-                      type="email"
-                      value={email}
-                      onChange={(event) => setEmail(event.target.value)}
-                      placeholder="email"
-                      aria-invalid={signupError ? "true" : "false"}
-                      className="w-full rounded-lg border border-brand-border bg-white px-4 py-3.5 text-[1rem] text-brand-text placeholder:text-brand-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-purple"
-                    />
-                    <button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="inline-flex w-full items-center justify-center rounded-lg bg-brand-purple px-5 py-3.5 text-sm font-semibold text-white shadow-lg shadow-brand-purple/30 transition hover:bg-[#b8850e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-purple sm:min-w-[15rem]"
-                    >
-                      {isSubmitting ? "Sending..." : "Download the Full LIF Guide"}
-                    </button>
+                {isGuideUnlocked ? (
+                  <div className="mt-5 space-y-2 rounded-lg border border-brand-border bg-white p-4 text-sm text-brand-text">
+                    <p>
+                      <span className="font-semibold text-brand-navy">One next move:</span> {result.nextMove}
+                    </p>
+                    <p>
+                      <span className="font-semibold text-brand-navy">Thinking visibility check:</span> {result.visibilityAnalysis.message}
+                    </p>
                   </div>
-                  {signupError ? <p className="text-sm text-red-600">{signupError}</p> : null}
-                </form>
+                ) : (
+                  <div className="mt-5 border-t border-brand-border pt-5">
+                    <div className="relative overflow-hidden rounded-lg border border-brand-border bg-white p-4">
+                      <div className="space-y-3 blur-[3px]" aria-hidden="true">
+                        <div className="h-3 w-32 rounded-full bg-brand-border" />
+                        <div className="h-3 w-full rounded-full bg-brand-border" />
+                        <div className="h-3 w-10/12 rounded-full bg-brand-border" />
+                        <div className="pt-2">
+                          <div className="h-3 w-44 rounded-full bg-brand-border" />
+                          <div className="mt-3 h-3 w-11/12 rounded-full bg-brand-border" />
+                        </div>
+                      </div>
+                      <div className="absolute inset-0 flex items-center justify-center bg-white/70">
+                        <div className="inline-flex items-center gap-2 rounded-full border border-brand-border bg-white px-4 py-2 text-sm font-semibold text-brand-navy shadow-soft">
+                          <LockIcon />
+                          <span>Unlock your next move.</span>
+                        </div>
+                      </div>
+                    </div>
 
-                <div className="mt-8 flex justify-center">
-                  <button
-                    type="button"
-                    onClick={resetAudit}
-                    className="inline-flex w-full items-center justify-center rounded-lg border border-brand-border bg-white px-5 py-3 text-sm font-semibold text-brand-text transition hover:border-brand-purple hover:text-brand-navy focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-purple sm:w-auto"
-                  >
-                    Try Again
-                  </button>
-                </div>
+                    <form
+                      onSubmit={handleGuideDownload}
+                      className="mt-5 flex flex-col gap-3"
+                      aria-label="Audit result guide signup form"
+                    >
+                      <div>
+                        <p className="text-sm leading-6 text-brand-text">
+                          Get the full LIF Teacher&apos;s Guide and learn how to strengthen this layer in your next lesson.
+                        </p>
+                      </div>
+                      <div className="flex flex-col gap-3 sm:flex-row">
+                        <input
+                          id="audit-result-email"
+                          name="email_address"
+                          type="email"
+                          value={email}
+                          onChange={(event) => setEmail(event.target.value)}
+                          placeholder="email"
+                          aria-invalid={signupError ? "true" : "false"}
+                          className="w-full rounded-lg border border-brand-border bg-white px-4 py-3.5 text-[1rem] text-brand-text placeholder:text-brand-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-purple"
+                        />
+                        <button
+                          type="submit"
+                          disabled={isSubmitting}
+                          className="inline-flex w-full items-center justify-center rounded-lg bg-brand-purple px-5 py-3.5 text-sm font-semibold text-white shadow-lg shadow-brand-purple/30 transition hover:bg-[#b8850e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-purple sm:min-w-[13rem] sm:w-auto"
+                        >
+                          {isSubmitting ? "Sending..." : "Send Me the Guide"}
+                        </button>
+                      </div>
+                      {signupError ? <p className="text-sm text-red-600">{signupError}</p> : null}
+                    </form>
+                  </div>
+                )}
+
               </div>
             )}
           </div>
